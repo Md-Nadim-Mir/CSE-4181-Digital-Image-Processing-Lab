@@ -42,3 +42,30 @@ for gamma in (gammas):
     subplot_number += 1
 
 plt.show()
+
+
+
+# Power Law Transformation (γ > 0)
+
+arial_image = cv2.imread("./Aerial Image 765x769.tif", 0)
+gammas = [1, 3, 4, 5]
+subplot_number = 1
+plt.figure(figsize = (15, 15))
+
+for gamma in (gammas):
+    transformed_image = power_law_transformation(arial_image, gamma)
+    plt.subplot(2, 2, subplot_number)
+    plt.imshow(cv2.cvtColor(transformed_image, cv2.COLOR_BGR2RGB))
+    plt.title(f"Power Law Transformation with γ = {gamma}")
+    subplot_number += 1
+
+plt.show()
+
+
+
+# Inverse Log Transformation
+
+transformed_image = inverse_log_transformation(arial_image)
+plt.imshow(cv2.cvtColor(transformed_image, cv2.COLOR_BGR2RGB))
+plt.title("Inverse Log Transformed Image")
+plt.show()
