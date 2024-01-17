@@ -3,7 +3,7 @@
 
 #Importing the Libraries
 
-import cv2 
+import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -34,3 +34,20 @@ plt.imshow(cv2.cvtColor(original_images, cv2.COLOR_BGR2RGB))#Displays the image 
 
 plt.title("The Skull Image")
 plt.show()
+
+
+
+# Showing the Histogram of the Original Image
+generate_histogram(original_images)
+
+# Making Single Threshold Segmentation observed from the Histogram
+threshold_intensity = 27
+segmented_image = np.where(original_images < threshold_intensity, 0, 255)
+segmented_image = np.uint8(segmented_image)
+
+plt.imshow(cv2.cvtColor(segmented_image, cv2.COLOR_BGR2RGB))
+plt.title("Histogram of the Segmented Image")
+plt.show()
+
+# Showing the Histogram of the Segmented Image
+generate_histogram(segmented_image)
