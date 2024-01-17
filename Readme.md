@@ -1,7 +1,5 @@
 ## Digital Image Processing Lab
-- **[Ahnaf Shahrear Khan](https://github.com/ahnafshahrear)**
-- **Computer Science & Engineering, University of Rajshahi**
-- **Code:** `CSE4181`
+
 
 ### Lab Tasks
 - **Task 1: Take the grayscale image of size 512x512 & perform the following operations -**
@@ -23,4 +21,6 @@
  - **Task 5: Take a binary image & perform the following morphological operations –**
 	- **(a) Perform Erosion & Dilation operations ✓**
 	- **(b) Opening & Closing operations ✓**
-	- **(c) Boundary extraction using morphological operation ✓** 
+	- **(c) Boundary extraction using morphological operation ✓**
+
+
